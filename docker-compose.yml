@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    image: beaubutner/bbutner:v3-backend
+    ports:
+      - "8000:8000"
