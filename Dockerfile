@@ -1,4 +1,4 @@
-FROM rust:latest
+FROM rustlang/rust:nightly
 
 WORKDIR /app
 
@@ -7,7 +7,6 @@ COPY . .
 EXPOSE 8000
 ENV ROCKET_PORT=8000
 
-RUN if [ ! -f "Cargo.toml" ]; then cargo init . ; fi
-RUN cargo install --path .
+RUN cargo build --release
 
-CMD ["/app/target/release/bbutnerv3-backend"]
+CMD ["./target/release/bbutnerv3-backend"]
