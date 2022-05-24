@@ -6,8 +6,4 @@ services:
       context: .
     image: beaubutner/bbutner:v3-backend
     ports:
-      - "80:8000"
-    environment:
-      - RUST_LOG-debug
-    volumes:
-      - /etc/letsencrypt/live/api.bbutner.com:/app/private
+      - "1337:8000" 
