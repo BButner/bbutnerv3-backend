@@ -1,4 +1,6 @@
-FROM rustlang/rust:nightly
+FROM rust:latest
+
+ENV RUST_BACKTRACE=1
 
 WORKDIR /app
 
